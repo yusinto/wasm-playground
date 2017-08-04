@@ -1,18 +1,42 @@
 {
   "name": "wasm-playground",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Playground for webassembly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wasm": "emcc src/universal/helloWorld.c -s WASM=1 -O3 -o dist/helloWorld.js",
+    "start": "npm run wasm && node src/server/index.js"
+  },
+  "author": "Yus Ng",
+  "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-register": "^6.24.1",
+    "bluebird": "^3.5.0",
+    "express": "^4.15.3",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.10"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.4.3",
+    "webpack": "^3.3.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^2.5.1",
+    "webpack-hot-middleware": "^2.18.2"
   }
 }
