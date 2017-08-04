@@ -1,4 +1,4 @@
-# ld-redux
+# wasm-playground
 
 > **A playground to run WebAssembly in React** :clap:
 
