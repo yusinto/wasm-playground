@@ -8,7 +8,7 @@ class App extends Component {
     // All the methods in utils.c are exposed globally because utils.js
     // is included as a script tag in our html.
     const randomNumber = _generateRandom();
-    console.log(`onClickGenerateRandom: ${randomNumber}`);
+    console.log(`wasm._generateRandom() => ${randomNumber}`);
     this.setState({randomNumber});
   };
 
@@ -18,7 +18,7 @@ class App extends Component {
         <div style={{fontWeight: 'bold', fontSize: '26px'}}>
           Welcome to WebAssembly React Playground!
         </div>
-        <div style={{width: '600px', paddingTop: '16px'}}>
+        <div style={{width: '80%', paddingTop: '16px'}}>
           Begin by clicking the button below to generate
           a random number. This calls a C function which is compiled in a .wasm file.
         </div>
