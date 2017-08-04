@@ -1,19 +1,32 @@
 import React, {Component} from 'react';
 
 class App extends Component {
-  render() {
-    let diceResult = -1;
-    if (typeof _roll_dice !== 'undefined') diceResult = _roll_dice();
+  state = {randomNumber: -1};
 
+  onClickGenerateRandom = () => {
+    const randomNumber = _generateRandom();
+    console.log(`onClickGenerateRandom: ${randomNumber}`);
+    this.setState({randomNumber});
+  };
+
+  render() {
     return (
       <div>
         Welcome to WebAsm!
         <br/>
         <br/>
         <div>
-          Dice roll from webasm:&nbsp;
-          <span style={{color: 'red'}}>{diceResult}</span>
+          <button onClick={this.onClickGenerateRandom}>Generate random</button>
         </div>
+        <br/>
+        {
+          this.state.randomNumber < 0 ?
+            <div>Click to generate random number</div>
+            :
+            <div style={{textAlign: 'center', width: '100px', borderWidth: 1, borderColor: 'red', borderStyle: 'solid', color: 'red'}}>
+              {this.state.randomNumber}
+            </div>
+        }
       </div>
     );
   }

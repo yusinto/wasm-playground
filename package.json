@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wasm": "emcc src/universal/helloWorld.c -s WASM=1 -O3 -o dist/helloWorld.js",
+    "wasm": "emcc src/universal/utils.c -s WASM=1 -O3 -o dist/utils.js",
     "start": "npm run wasm && node src/server/index.js"
   },
   "author": "Yus Ng",

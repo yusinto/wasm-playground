@@ -40,7 +40,7 @@ app.use((req, res) => {
           </head>
           <body>
             <div id="reactDiv"/>
-            <script src="/dist/helloWorld.js"></script>
+            <script src="/dist/utils.js"></script>
             <script src="/dist/bundle.js"></script>
           </body>
     </html>`;
