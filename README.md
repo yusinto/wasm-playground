@@ -2,7 +2,7 @@
 
 > **A playground to run WebAssembly in React** :clap:
 
-Refer to the [blog] (www.reactjunkie.com/webassembly-react/) for more info.
+Refer to the [blog](www.reactjunkie.com/webassembly-react/) for more info.
 
 ## Quickstart
 
